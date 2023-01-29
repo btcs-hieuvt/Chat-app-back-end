@@ -12,6 +12,9 @@ app.use(express.json());
 
 app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter);
+app.get("/", function (req, res) {
+  res.send("Welcome to Chat App Back-end Api v1.0.0");
+});
 
 mongoose
   .connect(process.env.MONGO_URL, {
