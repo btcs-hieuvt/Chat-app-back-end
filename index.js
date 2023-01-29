@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter);
-app.get("/", function (req, res) {
+app.get("/api/", function (req, res) {
   res.send("Welcome to Chat App Back-end Api v1.0.0");
 });
 
